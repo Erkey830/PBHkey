@@ -303,6 +303,8 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
     u8 max;
     u8 range;
     u8 rand;
+    u8 curvedLevel;
+    u8 curveAmount;
 
     if (LURE_STEP_COUNT == 0)
     {
@@ -317,7 +319,14 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
             min = wildPokemon[wildMonIndex].maxLevel;
             max = wildPokemon[wildMonIndex].minLevel;
         }
+        curvedLevel = GetPartyMonCurvedLevel();
+        if (max < curvedLevel)
+            curveAmount = (((2 * curvedLevel) + max) / 3) - max;
         range = max - min + 1;
+        
+         if (range < (curveAmount * 3) && (range != 0))
+            range = curveAmount / 3;
+        
         rand = Random() % range;
 
         // check ability for max level mon
@@ -327,13 +336,13 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIn
             if (ability == ABILITY_HUSTLE || ability == ABILITY_VITAL_SPIRIT || ability == ABILITY_PRESSURE)
             {
                 if (Random() % 2 == 0)
-                    return max;
+                    return max + curveAmount;
 
                 if (rand != 0)
                     rand--;
             }
         }
-        return min + rand;
+        return min + rand + curveAmount;
     }
     else
     {
