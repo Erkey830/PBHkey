@@ -120,11 +120,18 @@ static const u32 sRegionMapCursorSmallGfxLZ[] = INCBIN_U32("graphics/pokenav/reg
 static const u32 sRegionMapCursorLargeGfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/cursor_large.4bpp.lz");
 static const u16 sRegionMapBg_Pal[] = INCBIN_U16("graphics/pokenav/region_map/map.gbapal");
 static const u32 sRegionMapBg_GfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.8bpp.lz");
+
 static const u32 sSeviiRegionMapsBg_GfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/region_map.8bpp.lz");
 static const u32 sRegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.bin.lz");
+
+static const u32 sKantoRegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/sevii_123.bin.lz");
+
 static const u32 sSevii123RegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/sevii_123.bin.lz");
+
 static const u32 sSevii45RegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/sevii_45.bin.lz");
+
 static const u32 sSevii67RegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/sevii_67.bin.lz");
+
 static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCBIN_U16("graphics/pokenav/region_map/brendan_icon.gbapal");
 static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/brendan_icon.4bpp");
 static const u16 sRegionMapPlayerIcon_MayPal[] = INCBIN_U16("graphics/pokenav/region_map/may_icon.gbapal");
@@ -134,6 +141,7 @@ static const u8 sRegionMapPlayerIcon_MayGfx[] = INCBIN_U8("graphics/pokenav/regi
 #include "data/region_map/region_map_layout_sevii123.h"
 #include "data/region_map/region_map_layout_sevii45.h"
 #include "data/region_map/region_map_layout_sevii67.h"
+#include "data/region_map/region_map_layout_kanto.h"
 #include "data/region_map/region_map_entries.h"
 
 static const u16 sRegionMap_SpecialPlaceLocations[][2] =
@@ -344,6 +352,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_ROUTE_132] = {MAP_GROUP(MAP_ROUTE132), MAP_NUM(MAP_ROUTE132), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_133] = {MAP_GROUP(MAP_ROUTE133), MAP_NUM(MAP_ROUTE133), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_134] = {MAP_GROUP(MAP_ROUTE134), MAP_NUM(MAP_ROUTE134), HEAL_LOCATION_NONE},
+    [MAPSEC_PALLET_TOWN] = {MAP_GROUP(TEST), MAP_NUM(TEST), HEAL_LOCATION_TEST},
 };
 
 static const u8 *const sEverGrandeCityNames[] =
@@ -563,6 +572,7 @@ bool8 LoadRegionMapGfx(void)
         case REGION_SEVII123:
         case REGION_SEVII45:
         case REGION_SEVII67:
+        case REGION_KANTO:
         default:
             if (sRegionMap->bgManaged)
                 DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sSeviiRegionMapsBg_GfxLZ, 0, 0, 0);
@@ -618,6 +628,17 @@ bool8 LoadRegionMapGfx(void)
             else
             {
                 LZ77UnCompVram(sSevii67RegionMapBg_TilemapLZ, (u16 *)BG_SCREEN_ADDR(28));
+            }
+            break;
+            case REGION_KANTO:
+            if (sRegionMap->bgManaged)
+            {
+                if (!FreeTempTileDataBuffersIfPossible())
+                    DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sKantoRegionMapBg_TilemapLZ, 0, 0, 1);
+            }
+            else
+            {
+                LZ77UnCompVram(sKantoRegionMapBg_TilemapLZ, (u16 *)BG_SCREEN_ADDR(28));
             }
             break;
         default:
@@ -1043,6 +1064,8 @@ static u16 GetMapSecIdAt(u16 x, u16 y)
             return sRegionMap_MapSectionLayoutSevii45[y][x];
         case REGION_SEVII67:
             return sRegionMap_MapSectionLayoutSevii67[y][x];
+        case REGION_KANTO:
+            return sRegionMap_MapSectionLayoutKanto[y][x];
         default:
             return MAPSEC_NONE; // Retorna un valor por defecto si no se encuentra la región.
     }
@@ -1309,6 +1332,8 @@ static u8 GetMapsecType(u16 mapSecId)
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_SOUTHERN_ISLAND:
         return FlagGet(FLAG_LANDMARK_SOUTHERN_ISLAND) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
+        case MAPSEC_PALLET_TOWN:
+			return FlagGet(FLAG_VISITED_PALLET_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -1955,6 +1980,10 @@ static void CreateFlyDestIcons(void)
             mapSecStart = MAPSEC_SEVEN_ISLAND;
             mapSecEnd = MAPSEC_SIX_ISLAND; // Comentario original.
             break;
+        case REGION_KANTO:
+            canFlyFlag = FLAG_VISITED_PALLET_TOWN;
+            mapSecStart = MAPSEC_PALLET_TOWN;
+            mapSecEnd = MAPSEC_SPECIAL_AREA;
         default: // Manejo seguro para valores inesperados.
             return; // Salir de la función si la región no es válida.
     }

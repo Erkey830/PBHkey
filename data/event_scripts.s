@@ -1115,3 +1115,6 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/mining_game.inc"
 	.include "data/scripts/dexnav.inc"
+
+
+	.include "data/maps/test/scripts.inc"
