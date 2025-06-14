@@ -1633,7 +1633,7 @@ static bool8 DexNav_InitBgs(void)
         return FALSE;
 
     memset(sBg1TilemapBuffer, 0, 0x800);
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sDexNavMenuBgTemplates, NELEMS(sDexNavMenuBgTemplates));
     SetBgTilemapBuffer(1, sBg1TilemapBuffer);
     ScheduleBgCopyTilemapToVram(1);

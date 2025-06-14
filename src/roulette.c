@@ -985,7 +985,7 @@ static void InitRouletteBgAndWindows(void)
     u32 size = 0;
 
     sRoulette = AllocZeroed(sizeof(*sRoulette));
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(1, sBgTemplates, ARRAY_COUNT(sBgTemplates));
     SetBgTilemapBuffer(0, sRoulette->tilemapBuffers[0]);
     SetBgTilemapBuffer(1, sRoulette->tilemapBuffers[2]);
@@ -1003,7 +1003,7 @@ static void FreeRoulette(void)
     UnsetBgTilemapBuffer(0);
     UnsetBgTilemapBuffer(1);
     UnsetBgTilemapBuffer(2);
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     memset(sRoulette, 0, sizeof(*sRoulette));
     FREE_AND_SET_NULL(sRoulette);
 }

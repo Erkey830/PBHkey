@@ -275,7 +275,7 @@ bool32 IsInvalidBg(u32 bg)
         return FALSE;
 }
 
-void ResetBgsAndClearDma3BusyFlags(void)
+void ResetBgsAndClearDma3BusyFlags(u32 leftoverFireRedLeafGreenVariable)
 {
     int i;
     ResetBgs();

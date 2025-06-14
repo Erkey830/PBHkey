@@ -705,7 +705,7 @@ const struct BattleBackground sBattleEnvironmentTable[] =
 
 void BattleInitBgsAndWindows(void)
 {
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, gBattleBgTemplates, ARRAY_COUNT(gBattleBgTemplates));
 
     if (gBattleTypeFlags & BATTLE_TYPE_ARENA)

@@ -3,6 +3,7 @@
 #include "battle_anim.h"
 #include "battle_interface.h"
 #include "bg.h"
+#include "bw_summary_screen.h"
 #include "cable_club.h"
 #include "data.h"
 #include "daycare.h"
@@ -391,7 +392,7 @@ static void InitTradeMenu(void)
     SetVBlankCallback(VBlankCB_TradeMenu);
     LoadPalette(gStandardMenuPalette, BG_PLTT_ID(15), PLTT_SIZEOF(10));
     LoadPalette(gStandardMenuPalette, BG_PLTT_ID(13), PLTT_SIZEOF(10));
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
     SetBgTilemapBuffer(1, sTradeMenu->tilemapBuffer);
 
@@ -1516,9 +1517,19 @@ static void CB_ShowTradeMonSummaryScreen(void)
     if (!gPaletteFade.active)
     {
         if (sTradeMenu->cursorPosition < PARTY_SIZE)
-            ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gPlayerParty, sTradeMenu->cursorPosition, sTradeMenu->partyCounts[TRADE_PLAYER] - 1, CB2_ReturnToTradeMenu);
+        {
+            if (BW_SUMMARY_SCREEN)
+                ShowPokemonSummaryScreen_BW(SUMMARY_MODE_LOCK_MOVES, gPlayerParty, sTradeMenu->cursorPosition, sTradeMenu->partyCounts[TRADE_PLAYER] - 1, CB2_ReturnToTradeMenu);
+            else
+                ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gPlayerParty, sTradeMenu->cursorPosition, sTradeMenu->partyCounts[TRADE_PLAYER] - 1, CB2_ReturnToTradeMenu);
+        }
         else
-            ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gEnemyParty, sTradeMenu->cursorPosition - PARTY_SIZE, sTradeMenu->partyCounts[TRADE_PARTNER] - 1, CB2_ReturnToTradeMenu);
+        {
+            if (BW_SUMMARY_SCREEN)
+                ShowPokemonSummaryScreen_BW(SUMMARY_MODE_LOCK_MOVES, gEnemyParty, sTradeMenu->cursorPosition - PARTY_SIZE, sTradeMenu->partyCounts[TRADE_PARTNER] - 1, CB2_ReturnToTradeMenu);
+            else
+                ShowPokemonSummaryScreen(SUMMARY_MODE_LOCK_MOVES, gEnemyParty, sTradeMenu->cursorPosition - PARTY_SIZE, sTradeMenu->partyCounts[TRADE_PARTNER] - 1, CB2_ReturnToTradeMenu);
+        }
         FreeAllWindowBuffers();
     }
 }
@@ -2914,7 +2925,7 @@ void LinkTradeDrawWindow(void)
 static void TradeAnimInit_LoadGfx(void)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sTradeSequenceBgTemplates, ARRAY_COUNT(sTradeSequenceBgTemplates));
     ChangeBgX(0, 0, BG_COORD_SET);
     ChangeBgY(0, 0, BG_COORD_SET);

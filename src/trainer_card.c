@@ -889,7 +889,7 @@ static void ResetGpuRegs(void)
 
 static void InitBgsAndWindows(void)
 {
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sTrainerCardBgTemplates, ARRAY_COUNT(sTrainerCardBgTemplates));
     ChangeBgX(0, 0, BG_COORD_SET);
     ChangeBgY(0, 0, BG_COORD_SET);

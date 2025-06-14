@@ -342,7 +342,7 @@ static u32 LoopedTask_InitPokenavMenu(s32 state)
     case 0:
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
         FreeAllWindowBuffers();
-        ResetBgsAndClearDma3BusyFlags();
+        ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, gPokenavMainMenuBgTemplates, ARRAY_COUNT(gPokenavMainMenuBgTemplates));
         ResetBgPositions();
         ResetTempTileDataBuffers();

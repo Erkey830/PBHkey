@@ -3026,7 +3026,7 @@ static void LoadPokeJumpGfx(void)
     switch (sPokemonJumpGfx->mainState)
     {
     case 0:
-        ResetBgsAndClearDma3BusyFlags();
+        ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
         InitWindows(sWindowTemplates);
         ResetTempTileDataBuffers();

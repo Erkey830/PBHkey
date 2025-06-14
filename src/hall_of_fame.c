@@ -768,7 +768,7 @@ static void Task_Hof_HandleExit(u8 taskId)
         FreeAllWindowBuffers();
         UnsetBgTilemapBuffer(1);
         UnsetBgTilemapBuffer(3);
-        ResetBgsAndClearDma3BusyFlags();
+        ResetBgsAndClearDma3BusyFlags(0);
         DestroyTask(taskId);
         FreeAllHoFMem();
         StartCredits();
@@ -1070,7 +1070,7 @@ static void Task_HofPC_HandleExit(u8 taskId)
         FreeAllWindowBuffers();
         UnsetBgTilemapBuffer(1);
         UnsetBgTilemapBuffer(3);
-        ResetBgsAndClearDma3BusyFlags();
+        ResetBgsAndClearDma3BusyFlags(0);
         DestroyTask(taskId);
 
         FreeAllHoFMem();
@@ -1292,7 +1292,7 @@ static void LoadHofGfx(void)
 
 static void InitHofBgs(void)
 {
-    ResetBgsAndClearDma3BusyFlags();
+    ResetBgsAndClearDma3BusyFlags(0);
     InitBgsFromTemplates(0, sHof_BgTemplates, ARRAY_COUNT(sHof_BgTemplates));
     SetBgTilemapBuffer(1, sHofGfxPtr->tilemap1);
     SetBgTilemapBuffer(3, sHofGfxPtr->tilemap2);

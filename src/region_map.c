@@ -1671,7 +1671,7 @@ void CB2_OpenFlyMap(void)
         }
         break;
     case 1:
-        ResetBgsAndClearDma3BusyFlags();
+        ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(1, sFlyMapBgTemplates, ARRAY_COUNT(sFlyMapBgTemplates));
         gMain.state++;
         break;
