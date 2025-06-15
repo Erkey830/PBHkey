@@ -12,6 +12,7 @@
 #include "secret_base.h"
 #include "string_util.h"
 #include "international_string_util.h"
+#include "regions.h"
 #include "strings.h"
 #include "text_window.h"
 #include "constants/songs.h"
@@ -355,7 +356,6 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_ROUTE_132] = {MAP_GROUP(MAP_ROUTE132), MAP_NUM(MAP_ROUTE132), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_133] = {MAP_GROUP(MAP_ROUTE133), MAP_NUM(MAP_ROUTE133), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_134] = {MAP_GROUP(MAP_ROUTE134), MAP_NUM(MAP_ROUTE134), HEAL_LOCATION_NONE},
-    [MAPSEC_PALLET_TOWN] = {MAP_GROUP(TEST), MAP_NUM(TEST), HEAL_LOCATION_TEST},
 };
 
 static const u8 *const sEverGrandeCityNames[] =
@@ -2021,6 +2021,9 @@ static void CreateFlyDestIcons(void)
             break;
         case REGION_KANTO:
                 canFlyFlag = FLAG_VISITED_PALLET_TOWN;
+                mapSecStart = MAPSEC_SEVEN_ISLAND;
+                mapSecEnd = MAPSEC_SIX_ISLAND;
+                break;
                 for (mapSecId = MAPSEC_PALLET_TOWN; mapSecId <= MAPSEC_ROUTE_10_POKECENTER; mapSecId++)
                 {
                     GetMapSecDimensions(mapSecId, &x, &y, &width, &height);

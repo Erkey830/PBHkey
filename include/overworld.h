@@ -182,12 +182,12 @@ enum ItemObtainFlags
 };
 bool8 GetSetItemObtained(u16 item, enum ItemObtainFlags caseId);
 
-enum {
-    REGION_HOENN,
-    REGION_KANTO,
-    REGION_SEVII123,
-    REGION_SEVII45,
-    REGION_SEVII67
-};
+//enum {
+//    REGION_HOENN,
+//    REGION_KANTO,
+//    REGION_SEVII123,
+//    REGION_SEVII45,
+//    REGION_SEVII67
+//};
 
 #endif // GUARD_OVERWORLD_H
