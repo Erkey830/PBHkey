@@ -50,7 +50,7 @@
 #define P_GBA_STYLE_SPECIES_FOOTPRINTS   FALSE       // Por defecto, Pokémon tienen sus huellas actualizadas. Este config las vuelve al estilo GBA.
 
 // Otras configuraciones
-#define P_CRIES_ENABLED                  TRUE        // Si está habilitado, los Pokémon tendrán llantos. Deshabilitar esto ahorra alrededor de MUCHO espacio en la ROM (¡más del 25%!), pero en su lugar recomendamos deshabilitar familias de Pokémon individuales no utilizadas en include/config/species_enabled.h.
+#define P_CRIES_ENABLED                  FALSE        // Si está habilitado, los Pokémon tendrán llantos. Deshabilitar esto ahorra alrededor de MUCHO espacio en la ROM (¡más del 25%!), pero en su lugar recomendamos deshabilitar familias de Pokémon individuales no utilizadas en include/config/species_enabled.h.
 #define P_LEGENDARY_PERFECT_IVS          GEN_LATEST  // Desde Gen 6, los Legendarios, Mitológicos y Bestias Ultra encontradas en la naturaleza o recibidas como regalos tienen al menos 3 IVs perfectos.
 #define P_EV_CAP                         GEN_LATEST  // Desde Gen 6, el máximo de EVs por estadística es 252 en lugar de 255.
 #define P_SHOW_TERA_TYPE                 GEN_8       // Desde Gen 9, el Tipo Tera se muestra en la pantalla de resumen.
