@@ -4,7 +4,7 @@
     {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
-      "width": 30,
+      "width": 44,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -94,20 +94,20 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 28,
+      "height": 28,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_littleroot_town",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
     },
     {
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 32,
+      "height": 32,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_oldale_town",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
     },
@@ -115,7 +115,7 @@
       "id": "LAYOUT_DEWFORD_TOWN",
       "name": "DewfordTown_Layout",
       "width": 20,
-      "height": 20,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/DewfordTown/border.bin",
@@ -124,8 +124,8 @@
     {
       "id": "LAYOUT_LAVARIDGE_TOWN",
       "name": "LavaridgeTown_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 26,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/LavaridgeTown/border.bin",
@@ -144,10 +144,10 @@
     {
       "id": "LAYOUT_VERDANTURF_TOWN",
       "name": "VerdanturfTown_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 28,
+      "height": 22,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_vendanturf",
       "border_filepath": "data/layouts/VerdanturfTown/border.bin",
       "blockdata_filepath": "data/layouts/VerdanturfTown/map.bin"
     },
@@ -167,7 +167,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_littleroot_town",
       "border_filepath": "data/layouts/Route101/border.bin",
       "blockdata_filepath": "data/layouts/Route101/map.bin"
     },
@@ -177,7 +177,7 @@
       "width": 50,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_oldale_town",
       "border_filepath": "data/layouts/Route102/border.bin",
       "blockdata_filepath": "data/layouts/Route102/map.bin"
     },
@@ -187,7 +187,7 @@
       "width": 80,
       "height": 22,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_oldale_town",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"
     },
@@ -197,7 +197,7 @@
       "width": 40,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Route104/border.bin",
       "blockdata_filepath": "data/layouts/Route104/map.bin"
     },
@@ -225,7 +225,7 @@
       "id": "LAYOUT_ROUTE107",
       "name": "Route107_Layout",
       "width": 60,
-      "height": 20,
+      "height": 29,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Route107/border.bin",
@@ -237,7 +237,7 @@
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Route108/border.bin",
       "blockdata_filepath": "data/layouts/Route108/map.bin"
     },
@@ -245,7 +245,7 @@
       "id": "LAYOUT_ROUTE109",
       "name": "Route109_Layout",
       "width": 40,
-      "height": 63,
+      "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route109/border.bin",
@@ -317,7 +317,7 @@
       "width": 100,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_oldale_town",
       "border_filepath": "data/layouts/Route116/border.bin",
       "blockdata_filepath": "data/layouts/Route116/map.bin"
     },
@@ -387,7 +387,7 @@
       "width": 140,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
+      "secondary_tileset": "gTileset_oldale_town",
       "border_filepath": "data/layouts/Route123/border.bin",
       "blockdata_filepath": "data/layouts/Route123/map.bin"
     },
@@ -1277,7 +1277,7 @@
       "width": 17,
       "height": 33,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/DesertRuins/border.bin",
       "blockdata_filepath": "data/layouts/DesertRuins/map.bin"
     },
@@ -1287,7 +1287,7 @@
       "width": 42,
       "height": 15,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/GraniteCave_1F/border.bin",
       "blockdata_filepath": "data/layouts/GraniteCave_1F/map.bin"
     },
@@ -1297,7 +1297,7 @@
       "width": 32,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/GraniteCave_B1F/border.bin",
       "blockdata_filepath": "data/layouts/GraniteCave_B1F/map.bin"
     },
@@ -1307,17 +1307,17 @@
       "width": 32,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/GraniteCave_B2F/border.bin",
       "blockdata_filepath": "data/layouts/GraniteCave_B2F/map.bin"
     },
     {
       "id": "LAYOUT_PETALBURG_WOODS",
       "name": "PetalburgWoods_Layout",
-      "width": 48,
+      "width": 54,
       "height": 44,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_oldale_town",
       "border_filepath": "data/layouts/PetalburgWoods/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgWoods/map.bin"
     },
@@ -1325,7 +1325,7 @@
       "id": "LAYOUT_MT_CHIMNEY",
       "name": "MtChimney_Layout",
       "width": 40,
-      "height": 47,
+      "height": 49,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/MtChimney/border.bin",
@@ -1437,7 +1437,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Entrance/map.bin"
     },
@@ -1447,7 +1447,7 @@
       "width": 20,
       "height": 21,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room1/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room1/map.bin"
     },
@@ -1455,9 +1455,9 @@
       "id": "LAYOUT_SEAFLOOR_CAVERN_ROOM2",
       "name": "SeafloorCavern_Room2_Layout",
       "width": 18,
-      "height": 12,
+      "height": 21,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room2/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room2/map.bin"
     },
@@ -1467,7 +1467,7 @@
       "width": 16,
       "height": 17,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room3/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room3/map.bin"
     },
@@ -1477,7 +1477,7 @@
       "width": 18,
       "height": 19,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room4/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room4/map.bin"
     },
@@ -1487,7 +1487,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room5/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room5/map.bin"
     },
@@ -1517,7 +1517,7 @@
       "width": 11,
       "height": 14,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room8/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room8/map.bin"
     },
@@ -1527,7 +1527,7 @@
       "width": 27,
       "height": 46,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SeafloorCavern_Room9/border.bin",
       "blockdata_filepath": "data/layouts/SeafloorCavern_Room9/map.bin"
     },
@@ -1537,7 +1537,7 @@
       "width": 19,
       "height": 26,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/CaveOfOrigin_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfOrigin_Entrance/map.bin"
     },
@@ -1547,17 +1547,17 @@
       "width": 23,
       "height": 23,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/CaveOfOrigin_1F/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfOrigin_1F/map.bin"
     },
     {
       "id": "LAYOUT_CAVE_OF_ORIGIN_B1F",
       "name": "CaveOfOrigin_B1F_Layout",
-      "width": 19,
-      "height": 19,
+      "width": 23,
+      "height": 23,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/CaveOfOrigin_B1F/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfOrigin_B1F/map.bin"
     },
@@ -1567,7 +1567,7 @@
       "width": 46,
       "height": 45,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/VictoryRoad_1F/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_1F/map.bin"
     },
@@ -1577,7 +1577,7 @@
       "width": 35,
       "height": 35,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_LowTideEntranceRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_LowTideEntranceRoom/map.bin"
     },
@@ -1587,7 +1587,7 @@
       "width": 46,
       "height": 38,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_LowTideInnerRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_LowTideInnerRoom/map.bin"
     },
@@ -1597,7 +1597,7 @@
       "width": 21,
       "height": 15,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_LowTideStairsRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_LowTideStairsRoom/map.bin"
     },
@@ -1607,7 +1607,7 @@
       "width": 31,
       "height": 14,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_LowTideLowerRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_LowTideLowerRoom/map.bin"
     },
@@ -1617,7 +1617,7 @@
       "width": 35,
       "height": 35,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_HighTideEntranceRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_HighTideEntranceRoom/map.bin"
     },
@@ -1627,7 +1627,7 @@
       "width": 46,
       "height": 38,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_HighTideInnerRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_HighTideInnerRoom/map.bin"
     },
@@ -2527,7 +2527,7 @@
       "width": 17,
       "height": 33,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/IslandCave/border.bin",
       "blockdata_filepath": "data/layouts/IslandCave/map.bin"
     },
@@ -2537,7 +2537,7 @@
       "width": 17,
       "height": 33,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/AncientTomb/border.bin",
       "blockdata_filepath": "data/layouts/AncientTomb/map.bin"
     },
@@ -2567,7 +2567,7 @@
       "width": 21,
       "height": 23,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SealedChamber_OuterRoom/border.bin",
       "blockdata_filepath": "data/layouts/SealedChamber_OuterRoom/map.bin"
     },
@@ -2577,7 +2577,7 @@
       "width": 46,
       "height": 31,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/VictoryRoad_B1F/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_B1F/map.bin"
     },
@@ -2587,17 +2587,17 @@
       "width": 46,
       "height": 31,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/VictoryRoad_B2F/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_B2F/map.bin"
     },
     {
       "id": "LAYOUT_GRANITE_CAVE_STEVENS_ROOM",
       "name": "GraniteCave_StevensRoom_Layout",
-      "width": 15,
-      "height": 14,
+      "width": 14,
+      "height": 7,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_granitecave",
       "border_filepath": "data/layouts/GraniteCave_StevensRoom/border.bin",
       "blockdata_filepath": "data/layouts/GraniteCave_StevensRoom/map.bin"
     },
@@ -2634,8 +2634,8 @@
     {
       "id": "LAYOUT_JAGGED_PASS",
       "name": "JaggedPass_Layout",
-      "width": 30,
-      "height": 46,
+      "width": 34,
+      "height": 47,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/JaggedPass/border.bin",
@@ -2647,7 +2647,7 @@
       "width": 35,
       "height": 38,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/FieryPath/border.bin",
       "blockdata_filepath": "data/layouts/FieryPath/map.bin"
     },
@@ -2737,7 +2737,7 @@
       "width": 38,
       "height": 51,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
+      "secondary_tileset": "gTileset_mtpyr",
       "border_filepath": "data/layouts/MtPyre_Exterior/border.bin",
       "blockdata_filepath": "data/layouts/MtPyre_Exterior/map.bin"
     },
@@ -2747,7 +2747,7 @@
       "width": 50,
       "height": 37,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
+      "secondary_tileset": "gTileset_mtpyr",
       "border_filepath": "data/layouts/MtPyre_Summit/border.bin",
       "blockdata_filepath": "data/layouts/MtPyre_Summit/map.bin"
     },
@@ -2757,7 +2757,7 @@
       "width": 21,
       "height": 23,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SealedChamber_InnerRoom/border.bin",
       "blockdata_filepath": "data/layouts/SealedChamber_InnerRoom/map.bin"
     },
@@ -2827,7 +2827,7 @@
       "width": 15,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ScorchedSlab/border.bin",
       "blockdata_filepath": "data/layouts/ScorchedSlab/map.bin"
     },
@@ -2877,7 +2877,7 @@
       "width": 18,
       "height": 18,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/SkyPillar_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/SkyPillar_Entrance/map.bin"
     },
@@ -2957,7 +2957,7 @@
       "width": 20,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ShoalCave_LowTideIceRoom/border.bin",
       "blockdata_filepath": "data/layouts/ShoalCave_LowTideIceRoom/map.bin"
     },
@@ -3037,7 +3037,7 @@
       "width": 37,
       "height": 38,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_1F/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_1F/map.bin"
     },
@@ -3047,7 +3047,7 @@
       "width": 33,
       "height": 39,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_2F_1R/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_2F_1R/map.bin"
     },
@@ -3057,7 +3057,7 @@
       "width": 49,
       "height": 28,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_2F_2R/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_2F_2R/map.bin"
     },
@@ -3067,7 +3067,7 @@
       "width": 28,
       "height": 24,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_3F_1R/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_3F_1R/map.bin"
     },
@@ -3077,7 +3077,7 @@
       "width": 24,
       "height": 17,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_3F_2R/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_3F_2R/map.bin"
     },
@@ -3087,7 +3087,7 @@
       "width": 59,
       "height": 28,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_4F/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_4F/map.bin"
     },
@@ -3457,7 +3457,7 @@
       "width": 33,
       "height": 24,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_3F_3R/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_3F_3R/map.bin"
     },
@@ -3467,7 +3467,7 @@
       "width": 60,
       "height": 19,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_magmahideout",
       "border_filepath": "data/layouts/MagmaHideout_2F_3R/border.bin",
       "blockdata_filepath": "data/layouts/MagmaHideout_2F_3R/map.bin"
     },
@@ -3557,7 +3557,7 @@
       "width": 139,
       "height": 23,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/DesertUnderpass/border.bin",
       "blockdata_filepath": "data/layouts/DesertUnderpass/map.bin"
     },
@@ -3667,7 +3667,7 @@
       "width": 46,
       "height": 54,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ArtisanCave_B1F/border.bin",
       "blockdata_filepath": "data/layouts/ArtisanCave_B1F/map.bin"
     },
@@ -3677,7 +3677,7 @@
       "width": 21,
       "height": 22,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/ArtisanCave_1F/border.bin",
       "blockdata_filepath": "data/layouts/ArtisanCave_1F/map.bin"
     },
@@ -3737,7 +3737,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/MarineCave_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/MarineCave_Entrance/map.bin"
     },
@@ -3747,7 +3747,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/TerraCave_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/TerraCave_Entrance/map.bin"
     },
@@ -3757,7 +3757,7 @@
       "width": 27,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/TerraCave_End/border.bin",
       "blockdata_filepath": "data/layouts/TerraCave_End/map.bin"
     },
@@ -3795,9 +3795,9 @@
       "id": "LAYOUT_MARINE_CAVE_END",
       "name": "MarineCave_End_Layout",
       "width": 27,
-      "height": 30,
+      "height": 46,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/MarineCave_End/border.bin",
       "blockdata_filepath": "data/layouts/MarineCave_End/map.bin"
     },
@@ -3867,7 +3867,7 @@
       "width": 32,
       "height": 24,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/AlteringCave/border.bin",
       "blockdata_filepath": "data/layouts/AlteringCave/map.bin"
     },
@@ -4430,6 +4430,66 @@
       "secondary_tileset": "gTileset_NationalPark",
       "border_filepath": "data/layouts/NationalPark/border.bin",
       "blockdata_filepath": "data/layouts/NationalPark/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN",
+      "name": "PalletTown_Layout",
+      "width": 32,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_pueblopaleta",
+      "border_filepath": "data/layouts/PalletTown/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIANCITY",
+      "name": "viridiancity_Layout",
+      "width": 48,
+      "height": 40,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_viridiancity",
+      "border_filepath": "data/layouts/viridiancity/border.bin",
+      "blockdata_filepath": "data/layouts/viridiancity/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTERCITY",
+      "name": "pewtercity_Layout",
+      "width": 48,
+      "height": 40,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_pewtercity",
+      "border_filepath": "data/layouts/pewtercity/border.bin",
+      "blockdata_filepath": "data/layouts/pewtercity/map.bin"
+    },
+    {
+      "id": "LAYOUT_CERULEANCITY",
+      "name": "ceruleancity_Layout",
+      "width": 48,
+      "height": 40,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_ceruleancity",
+      "border_filepath": "data/layouts/ceruleancity/border.bin",
+      "blockdata_filepath": "data/layouts/ceruleancity/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVENDER_TOWN",
+      "name": "LavenderTown_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_lavendertown",
+      "border_filepath": "data/layouts/LavenderTown/border.bin",
+      "blockdata_filepath": "data/layouts/LavenderTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLON_CITY",
+      "name": "VermillonCity_Layout",
+      "width": 48,
+      "height": 40,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_VermillonCity",
+      "border_filepath": "data/layouts/VermillonCity/border.bin",
+      "blockdata_filepath": "data/layouts/VermillonCity/map.bin"
     }
   ]
 }

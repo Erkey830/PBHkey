@@ -2,6 +2,7 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_TownsAndRoutesJohto",
+    "gMapGroup_TownsAndRoutesKanto",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -130,6 +131,14 @@
     "Route48",
     "ChampionRoute",
     "NationalPark"
+  ],
+  "gMapGroup_TownsAndRoutesKanto": [
+    "PalletTown",
+    "viridiancity",
+    "pewtercity",
+    "ceruleancity",
+    "LavenderTown",
+    "VermillonCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

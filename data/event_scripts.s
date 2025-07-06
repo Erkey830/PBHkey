@@ -64,8 +64,7 @@
 	.include "asm/macros.inc"
 	.include "asm/macros/event.inc"
 	.include "constants/constants.inc"
-
-	.section script_data, "aw", %progbits
+.section script_data, "aw", %progbits
 
 	.set ALLOCATE_SCRIPT_CMD_TABLE, 1
 	.include "data/script_cmd_table.inc"
@@ -569,13 +568,11 @@ gStdScripts_End::
 	.include "data/maps/Route119_WeatherInstitute_2F/scripts.inc"
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
-
-	.include "data/scripts/std_msgbox.inc"
+.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
-
-	.include "data/scripts/config.inc"
+.include "data/scripts/config.inc"
 	.include "data/scripts/debug.inc"
 
 EventScript_WhiteOut::
@@ -1006,8 +1003,7 @@ gText_Sudowoodo_Attacked::
 
 gText_LegendaryFlewAway::
 	.string "¡El {STR_VAR_1} se ha marchado!$"
-
-	.include "data/text/pc_transfer.inc"
+.include "data/text/pc_transfer.inc"
 	.include "data/text/questionnaire.inc"
 	.include "data/text/abnormal_weather.inc"
 
@@ -1116,72 +1112,44 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/mining_game.inc"
 	.include "data/scripts/dexnav.inc"
 
-.include "data/maps/NewBarkTown/scripts.inc"
-
+	.include "data/maps/NewBarkTown/scripts.inc"
 	.include "data/maps/Route29/scripts.inc"
-
 	.include "data/maps/CherrygroveCity/scripts.inc"
-
 	.include "data/maps/Route30/scripts.inc"
-
 	.include "data/maps/Route31/scripts.inc"
-
 	.include "data/maps/VioletCity/scripts.inc"
-
 	.include "data/maps/Route36/scripts.inc"
-
 	.include "data/maps/EcruteakCity/scripts.inc"
-
 	.include "data/maps/Route37/scripts.inc"
-
 	.include "data/maps/Route38/scripts.inc"
-
 	.include "data/maps/Route39/scripts.inc"
-
 	.include "data/maps/OlivineCity/scripts.inc"
-
 	.include "data/maps/Route40/scripts.inc"
-
 	.include "data/maps/Route41/scripts.inc"
-
 	.include "data/maps/CianwoodCity/scripts.inc"
-
 	.include "data/maps/Route42/scripts.inc"
-
 	.include "data/maps/MahoganyTown/scripts.inc"
-
 	.include "data/maps/Route44/scripts.inc"
-
 	.include "data/maps/Route43/scripts.inc"
-
 	.include "data/maps/LagoFuria/scripts.inc"
-
 	.include "data/maps/Route35/scripts.inc"
-
 	.include "data/maps/GoldenrodCity/scripts.inc"
-
 	.include "data/maps/GoldenrodCity2/scripts.inc"
-
 	.include "data/maps/Route34/scripts.inc"
-
 	.include "data/maps/Route46/scripts.inc"
-
 	.include "data/maps/Route45/scripts.inc"
-
 	.include "data/maps/BlackthornCity/scripts.inc"
-
 	.include "data/maps/Route32/scripts.inc"
-
 	.include "data/maps/AlphaRuins/scripts.inc"
-
 	.include "data/maps/AzaleaTown/scripts.inc"
-
 	.include "data/maps/Route33/scripts.inc"
-
 	.include "data/maps/Route47/scripts.inc"
-
 	.include "data/maps/Route48/scripts.inc"
-
 	.include "data/maps/ChampionRoute/scripts.inc"
-
 	.include "data/maps/NationalPark/scripts.inc"
+	.include "data/maps/PalletTown/scripts.inc"
+	.include "data/maps/viridiancity/scripts.inc"
+	.include "data/maps/pewtercity/scripts.inc"
+	.include "data/maps/ceruleancity/scripts.inc"
+	.include "data/maps/LavenderTown/scripts.inc"
+	.include "data/maps/VermillonCity/scripts.inc"
