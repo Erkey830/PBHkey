@@ -1153,3 +1153,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ceruleancity/scripts.inc"
 	.include "data/maps/LavenderTown/scripts.inc"
 	.include "data/maps/VermillonCity/scripts.inc"
+	.include "data/maps/CeladonCity/scripts.inc"

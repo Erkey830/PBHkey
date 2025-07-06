@@ -1143,3 +1143,14 @@ const struct Tileset gTileset_VermillonCity =
     .metatileAttributes = gMetatileAttributes_VermillonCity,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CeladonCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeladonCity,
+    .palettes = gTilesetPalettes_CeladonCity,
+    .metatiles = gMetatiles_CeladonCity,
+    .metatileAttributes = gMetatileAttributes_CeladonCity,
+    .callback = NULL,
+};

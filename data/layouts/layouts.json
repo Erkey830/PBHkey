@@ -4490,6 +4490,16 @@
       "secondary_tileset": "gTileset_VermillonCity",
       "border_filepath": "data/layouts/VermillonCity/border.bin",
       "blockdata_filepath": "data/layouts/VermillonCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELADON_CITY",
+      "name": "CeladonCity_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_CeladonCity",
+      "border_filepath": "data/layouts/CeladonCity/border.bin",
+      "blockdata_filepath": "data/layouts/CeladonCity/map.bin"
     }
   ]
 }

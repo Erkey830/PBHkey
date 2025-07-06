@@ -288,3 +288,6 @@ const u16 gMetatileAttributes_lavendertown[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_VermillonCity[] = INCBIN_U16("data/tilesets/secondary/vermillon_city/metatiles.bin");
 const u16 gMetatileAttributes_VermillonCity[] = INCBIN_U16("data/tilesets/secondary/vermillon_city/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadon_city/metatiles.bin");
+const u16 gMetatileAttributes_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadon_city/metatile_attributes.bin");
