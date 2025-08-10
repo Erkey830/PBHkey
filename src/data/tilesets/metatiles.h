@@ -291,3 +291,9 @@ const u16 gMetatileAttributes_VermillonCity[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadon_city/metatiles.bin");
 const u16 gMetatileAttributes_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadon_city/metatile_attributes.bin");
+
+const u16 gMetatiles_Fuchsiacity[] = INCBIN_U16("data/tilesets/secondary/fuchsiacity/metatiles.bin");
+const u16 gMetatileAttributes_Fuchsiacity[] = INCBIN_U16("data/tilesets/secondary/fuchsiacity/metatile_attributes.bin");
+
+const u16 gMetatiles_cinnabar[] = INCBIN_U16("data/tilesets/secondary/cinnabar/metatiles.bin");
+const u16 gMetatileAttributes_cinnabar[] = INCBIN_U16("data/tilesets/secondary/cinnabar/metatile_attributes.bin");

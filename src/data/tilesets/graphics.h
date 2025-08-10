@@ -2146,3 +2146,41 @@ const u16 gTilesetPalettes_CeladonCity[][16] =
 };
 
 const u32 gTilesetTiles_CeladonCity[] = INCBIN_U32("data/tilesets/secondary/celadon_city/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Fuchsiacity[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/fuchsiacity/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Fuchsiacity[] = INCBIN_U32("data/tilesets/secondary/fuchsiacity/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_cinnabar[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/cinnabar/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_cinnabar[] = INCBIN_U32("data/tilesets/secondary/cinnabar/tiles.4bpp.lz");
