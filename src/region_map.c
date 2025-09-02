@@ -670,16 +670,16 @@ bool8 LoadRegionMapGfx(void)
             switch(gMapHeader.region)
             {
                     case REGION_HOENN:
-                        LoadPalette(sRegionMapBg_Pal, 0x70, 0x60);
+                        LoadPalette(sRegionMapBg_GfxLZ, 0x70, 0x60);
                         break;
                     case REGION_KANTO:
-                        LoadPalette(sRegionMapBg_Pal, 0x70, 0x60);
+                        LoadPalette(sRegionMapBg_GfxLZ, 0x70, 0x60);
                         break;
 					case REGION_SEVII123:	
 					case REGION_SEVII45:
 					case REGION_SEVII67:
                     default:
-                        LoadPalette(sRegionMapBg_Pal, 0x70, 0x60);
+                        LoadPalette(sRegionMapBg_GfxLZ, 0x70, 0x60);
                         break;
                 }
         }

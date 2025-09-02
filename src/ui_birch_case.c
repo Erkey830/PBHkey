@@ -687,8 +687,8 @@ static bool8 BirchCaseLoadGraphics(void) // load tilesets, tilemaps, spritesheet
     case 1:
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
-            LZDecompressWram(sCaseTilemap, sBg1TilemapBuffer);
-            LZDecompressWram(sTextBgTilemap, sBg2TilemapBuffer);
+            DecompressDataWithHeaderVram(sCaseTilemap, sBg1TilemapBuffer);
+            DecompressDataWithHeaderVram(sTextBgTilemap, sBg2TilemapBuffer);
             sBirchCaseDataPtr->gfxLoadState++;
         }
         break;
