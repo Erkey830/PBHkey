@@ -85,6 +85,7 @@ lt_o_SoundInfo_pcmBuffer: .word o_SoundInfo_pcmBuffer
 lt_PCM_DMA_BUF_SIZE:      .word PCM_DMA_BUF_SIZE
 	thumb_func_end SoundMain
 
+	.section .iwram.code, "ax", %progbits
 /* HQ-Mixer rev 4.0 created by ipatix (c) 2021
  * licensed under GPLv3, see LICENSE.txt for details */
 
