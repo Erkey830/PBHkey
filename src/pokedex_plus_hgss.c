@@ -6799,14 +6799,21 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                         StringAppend(gStringVar4, COMPOUND_STRING("in "));
                     else if (condition == IF_NOT_REGION)
                         StringAppend(gStringVar4, COMPOUND_STRING("out of "));
-
+                
                     switch ((enum Region)evolutions[i].params[j].arg1)
                     {
                     case REGION_NONE:
                     case REGIONS_COUNT:
                         StringAppend(gStringVar4, COMPOUND_STRING("???"));
                         break;
-                    case REGION_KANTO: StringAppend(gStringVar4, COMPOUND_STRING("Kanto")); break;
+                    
+                    case REGION_KANTO:
+                    case REGION_SEVII123:
+                    case REGION_SEVII45:
+                    case REGION_SEVII67:
+                        StringAppend(gStringVar4, COMPOUND_STRING("Kanto"));
+                        break;
+                    
                     case REGION_JOHTO: StringAppend(gStringVar4, COMPOUND_STRING("Johto")); break;
                     case REGION_HOENN: StringAppend(gStringVar4, COMPOUND_STRING("Hoenn")); break;
                     case REGION_SINNOH: StringAppend(gStringVar4, COMPOUND_STRING("Sinnoh")); break;

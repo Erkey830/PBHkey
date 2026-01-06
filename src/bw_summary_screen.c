@@ -218,7 +218,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
     u8 secondMoveIndex;
     bool8 lockMovesFlag; // This is used to prevent the player from changing position of moves in a battle or when trading.
     u8 bgDisplayOrder; // unused
-    u8 relearnableMovesNum;
+    bool8 hasRelearnableMoves;
     u8 windowIds[8];
     u8 spriteIds[SPRITE_ARR_ID_COUNT];
     bool8 handleDeoxys;
@@ -2163,91 +2163,86 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
 {
     u32 i;
     struct PokeSummary *sum = &sMonSummaryScreen->summary;
-    // Spread the data extraction over multiple frames.
+
     switch (sMonSummaryScreen->switchCounter)
     {
     case 0:
-        sum->species = GetMonData(mon, MON_DATA_SPECIES);
+        sum->species  = GetMonData(mon, MON_DATA_SPECIES);
         sum->species2 = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
-        sum->exp = GetMonData(mon, MON_DATA_EXP);
-        sum->level = GetMonData(mon, MON_DATA_LEVEL);
+        sum->exp      = GetMonData(mon, MON_DATA_EXP);
+        sum->level    = GetMonData(mon, MON_DATA_LEVEL);
         sum->abilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM);
-        sum->item = GetMonData(mon, MON_DATA_HELD_ITEM);
-        sum->pid = GetMonData(mon, MON_DATA_PERSONALITY);
-        sum->sanity = GetMonData(mon, MON_DATA_SANITY_IS_BAD_EGG);
+        sum->item     = GetMonData(mon, MON_DATA_HELD_ITEM);
+        sum->pid      = GetMonData(mon, MON_DATA_PERSONALITY);
+        sum->sanity   = GetMonData(mon, MON_DATA_SANITY_IS_BAD_EGG);
 
         if (sum->sanity)
             sum->isEgg = TRUE;
         else
             sum->isEgg = GetMonData(mon, MON_DATA_IS_EGG);
-
         break;
     case 1:
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
             sum->moves[i] = GetMonData(mon, MON_DATA_MOVE1+i);
-            sum->pp[i] = GetMonData(mon, MON_DATA_PP1+i);
+            sum->pp[i]    = GetMonData(mon, MON_DATA_PP1+i);
         }
         sum->ppBonuses = GetMonData(mon, MON_DATA_PP_BONUSES);
         break;
     case 2:
-        if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == SUMMARY_MODE_BOX || sMonSummaryScreen->handleDeoxys == TRUE)
+        sum->nature    = GetNature(mon);
+        sum->mintNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
+        sum->currentHP = GetMonData(mon, MON_DATA_HP);
+        sum->maxHP     = GetMonData(mon, MON_DATA_MAX_HP);
+        if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == SUMMARY_MODE_BOX || sMonSummaryScreen->handleDeoxys)
         {
-            sum->nature = GetNature(mon);
-            sum->mintNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
-            sum->currentHP = GetMonData(mon, MON_DATA_HP);
-            sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
-            sum->atk = GetMonData(mon, MON_DATA_ATK);
-            sum->def = GetMonData(mon, MON_DATA_DEF);
-            sum->spatk = GetMonData(mon, MON_DATA_SPATK);
-            sum->spdef = GetMonData(mon, MON_DATA_SPDEF);
-            sum->speed = GetMonData(mon, MON_DATA_SPEED);
+            sum->atk    = GetMonData(mon, MON_DATA_ATK);
+            sum->def    = GetMonData(mon, MON_DATA_DEF);
+            sum->spatk  = GetMonData(mon, MON_DATA_SPATK);
+            sum->spdef  = GetMonData(mon, MON_DATA_SPDEF);
+            sum->speed  = GetMonData(mon, MON_DATA_SPEED);
         }
         else
         {
-            sum->nature = GetNature(mon);
-            sum->mintNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
-            sum->currentHP = GetMonData(mon, MON_DATA_HP);
-            sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
-            sum->atk = GetMonData(mon, MON_DATA_ATK2);
-            sum->def = GetMonData(mon, MON_DATA_DEF2);
-            sum->spatk = GetMonData(mon, MON_DATA_SPATK2);
-            sum->spdef = GetMonData(mon, MON_DATA_SPDEF2);
-            sum->speed = GetMonData(mon, MON_DATA_SPEED2);
+            sum->atk    = GetMonData(mon, MON_DATA_ATK2);
+            sum->def    = GetMonData(mon, MON_DATA_DEF2);
+            sum->spatk  = GetMonData(mon, MON_DATA_SPATK2);
+            sum->spdef  = GetMonData(mon, MON_DATA_SPDEF2);
+            sum->speed  = GetMonData(mon, MON_DATA_SPEED2);
         }
         break;
     case 3:
         GetMonData(mon, MON_DATA_OT_NAME, sum->OTName);
         ConvertInternationalString(sum->OTName, GetMonData(mon, MON_DATA_LANGUAGE));
-        sum->ailment = GetMonAilment(mon);
-        sum->OTGender = GetMonData(mon, MON_DATA_OT_GENDER);
-        sum->OTID = GetMonData(mon, MON_DATA_OT_ID);
+        sum->ailment   = GetMonAilment(mon);
+        sum->OTGender  = GetMonData(mon, MON_DATA_OT_GENDER);
+        sum->OTID      = GetMonData(mon, MON_DATA_OT_ID);
         sum->metLocation = GetMonData(mon, MON_DATA_MET_LOCATION);
-        sum->metLevel = GetMonData(mon, MON_DATA_MET_LEVEL);
-        sum->metGame = GetMonData(mon, MON_DATA_MET_GAME);
-        sum->friendship = GetMonData(mon, MON_DATA_FRIENDSHIP);
+        sum->metLevel    = GetMonData(mon, MON_DATA_MET_LEVEL);
+        sum->metGame     = GetMonData(mon, MON_DATA_MET_GAME);
+        sum->friendship  = GetMonData(mon, MON_DATA_FRIENDSHIP);
         break;
     case 4:
-        sum->ivHp = GetMonData(mon, MON_DATA_HP_IV);
-        sum->ivAtk = GetMonData(mon, MON_DATA_ATK_IV);
-        sum->ivDef = GetMonData(mon, MON_DATA_DEF_IV);
+        sum->ivHp    = GetMonData(mon, MON_DATA_HP_IV);
+        sum->ivAtk   = GetMonData(mon, MON_DATA_ATK_IV);
+        sum->ivDef   = GetMonData(mon, MON_DATA_DEF_IV);
         sum->ivSpatk = GetMonData(mon, MON_DATA_SPATK_IV);
         sum->ivSpdef = GetMonData(mon, MON_DATA_SPDEF_IV);
         sum->ivSpeed = GetMonData(mon, MON_DATA_SPEED_IV);
         break;
     case 5:
-        sum->evHp = GetMonData(mon, MON_DATA_HP_EV);
-        sum->evAtk = GetMonData(mon, MON_DATA_ATK_EV);
-        sum->evDef = GetMonData(mon, MON_DATA_DEF_EV);
+        sum->evHp    = GetMonData(mon, MON_DATA_HP_EV);
+        sum->evAtk   = GetMonData(mon, MON_DATA_ATK_EV);
+        sum->evDef   = GetMonData(mon, MON_DATA_DEF_EV);
         sum->evSpatk = GetMonData(mon, MON_DATA_SPATK_EV);
         sum->evSpdef = GetMonData(mon, MON_DATA_SPDEF_EV);
         sum->evSpeed = GetMonData(mon, MON_DATA_SPEED_EV);
         break;
     default:
-        sum->ribbonCount = GetMonData(mon, MON_DATA_RIBBON_COUNT);        
-        sum->teraType = GetMonData(mon, MON_DATA_TERA_TYPE);
-        sum->isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
-        sMonSummaryScreen->relearnableMovesNum = P_SUMMARY_SCREEN_MOVE_RELEARNER ? GetNumberOfRelearnableMoves(mon) : 0;
+        sum->ribbonCount = GetMonData(mon, MON_DATA_RIBBON_COUNT);
+        sum->teraType    = GetMonData(mon, MON_DATA_TERA_TYPE);
+        sum->isShiny     = GetMonData(mon, MON_DATA_IS_SHINY);
+        sMonSummaryScreen->hasRelearnableMoves = FALSE;
         return TRUE;
     }
     sMonSummaryScreen->switchCounter++;
@@ -2490,11 +2485,11 @@ static void Task_HandleInput(u8 taskId)
         {
             sMonSummaryScreen->callback = CB2_InitLearnMove;
             gSpecialVar_0x8004 = sMonSummaryScreen->curMonIndex;
-            gOriginSummaryScreenPage = sMonSummaryScreen->currPageIndex;
+            gRelearnMode = sMonSummaryScreen->currPageIndex;
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
             BeginCloseSummaryScreen(taskId);
-        }  
+        }
         else if (DEBUG_POKEMON_SPRITE_VISUALIZER && JOY_NEW(SELECT_BUTTON) && !gMain.inBattle)
         {
             sMonSummaryScreen->callback = CB2_Pokemon_Sprite_Visualizer;
@@ -4658,7 +4653,7 @@ static void PrintContestMoveDescription(u8 moveSlot)
     if (move != MOVE_NONE)
     {
         windowId = AddWindowFromTemplateList(sPageMovesTemplate, PSS_DATA_WINDOW_MOVE_DESCRIPTION);
-        FormatTextByWidth(desc, 119, FONT_BW_SUMMARY_SCREEN, gContestEffectDescriptionPointers[gMovesInfo[move].contestEffect], GetFontAttribute(FONT_BW_SUMMARY_SCREEN, FONTATTR_LETTER_SPACING));
+        FormatTextByWidth(desc, 119, FONT_BW_SUMMARY_SCREEN, gContestEffects[GetMoveContestEffect(move)].description, GetFontAttribute(FONT_BW_SUMMARY_SCREEN, FONTATTR_LETTER_SPACING));
         PrintTextOnWindow_BW_Font(windowId, desc, 2, 0, 0, 0);
     }
 }
@@ -4700,12 +4695,12 @@ static void PrintMoveDetails(u16 move)
             HandleAppealJamTilemap(move);
             if (BW_SUMMARY_AUTO_FORMAT_MOVE_DESCRIPTIONS)
             {
-                FormatTextByWidth(desc, 119, FONT_BW_SUMMARY_SCREEN, gContestEffectDescriptionPointers[gMovesInfo[move].contestEffect], GetFontAttribute(FONT_BW_SUMMARY_SCREEN, FONTATTR_LETTER_SPACING));
+                FormatTextByWidth(desc, 119, FONT_BW_SUMMARY_SCREEN, gContestEffects[GetMoveContestEffect(move)].description, GetFontAttribute(FONT_BW_SUMMARY_SCREEN, FONTATTR_LETTER_SPACING));
                 PrintTextOnWindow_BW_Font(windowId, desc, 2, 0, 0, 0);
             }
             else
             {
-                PrintTextOnWindow_BW_Font(windowId, gContestEffectDescriptionPointers[gMovesInfo[move].contestEffect], 2, 0, 0, 0);
+                PrintTextOnWindow_BW_Font(windowId, gContestEffects[GetMoveContestEffect(move)].description, 2, 0, 0, 0);
             }
         }
         PutWindowTilemap(windowId);
@@ -5463,7 +5458,7 @@ static inline bool32 ShouldShowMoveRelearner(void)
          && !sMonSummaryScreen->lockMovesFlag
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX
          && sMonSummaryScreen->mode != SUMMARY_MODE_BOX_CURSOR
-         && sMonSummaryScreen->relearnableMovesNum > 0
+         && sMonSummaryScreen->hasRelearnableMoves
          && !InBattleFactory() 
          && !InSlateportBattleTent());
 }
