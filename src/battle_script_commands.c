@@ -6176,7 +6176,7 @@ static void Cmd_moveend(void)
                 // Not strictly a protect effect, but works the same way
                 if (IsBattlerUsingBeakBlast(gBattlerTarget)
                  && CanBeBurned(gBattlerAttacker, gBattlerAttacker, GetBattlerAbility(gBattlerAttacker))
-                 && !(gBattleStruct->moveResultFlags[gBattlerTarget] & MOVE_RESULT_NO_EFFECT))
+                 && IsBattlerTurnDamaged(gBattlerTarget))
                 {
                     gProtectStructs[gBattlerAttacker].touchedProtectLike = FALSE;
                     gBattleMons[gBattlerAttacker].status1 = STATUS1_BURN;
@@ -12337,7 +12337,15 @@ static void Cmd_copyfoestats(void)
     {
         gBattleMons[gBattlerAttacker].statStages[i] = gBattleMons[gBattlerTarget].statStages[i];
     }
-    gBattleScripting.battler = gBattlerTarget;
+    if (GetConfig(CONFIG_PSYCH_UP_CRIT_RATIO) >= GEN_6)
+    {
+        // Copy crit boosts (Focus Energy, Dragon Cheer, G-Max Chi Strike)
+        gBattleMons[gBattlerAttacker].volatiles.focusEnergy = gBattleMons[gBattlerTarget].volatiles.focusEnergy;
+        gBattleMons[gBattlerAttacker].volatiles.dragonCheer = gBattleMons[gBattlerTarget].volatiles.dragonCheer;
+        gBattleMons[gBattlerAttacker].volatiles.bonusCritStages = gBattleMons[gBattlerTarget].volatiles.bonusCritStages;
+    }
+    gEffectBattler = gBattlerTarget;
+    gBattleScripting.battler = gBattlerAttacker;
 
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
